@@ -26,7 +26,7 @@
 - Provider : GithubProvider a ContextAPI foi usada para distribuir os dados do usuário
 - ResetCss usa o reset style do styled-components
 
-```
+```Js
 import { createGlobalStyle } from "styled-components";
 
 export const ResetCSS = createGlobalStyle`
@@ -34,36 +34,48 @@ export const ResetCSS = createGlobalStyle`
 ```
 Sobre Context API 
 
-
-```
 <p> Lembrando : Contexto (context) é usado principalmente quando algum dado precisa ser acessado por muitos 
 componentes em diferentes níveis.Use contexto moderadamente uma vez que isto pode dificultar a reutilização de
 componentes. Contexto (context) disponibiliza uma forma de passar dados entre a árvore de componentes 
 sem precisar passar props manualmente em cada nível. 
 <a href="https://pt-br.reactjs.org/docs/context.html">Mais sobre</a>
 </p>
-```
+
 
 Sobre API 
 
-```
+
 <p> Lembrando : Uma API simples é um endereço que ao ser consultado fornece conteúdo na maioria das vezes por JSON
 que pode ser consumido por uma aplicação 
 </p>
+
+- Provider guarda e busca os dados 
+- Componentes filhos do provider 
+- Botão buscar -> api.get user -> estado do provider 
+- Qualquer lugar que conheça o provider será atualizado (Single source of Truth)
+- Usamos o axios (HTTP mais facil que Fetch)
+- Usando styles Components : 
+
+```JS
+import styled from "styled-components";
+export const WrapperTabs = styled(Tabs)`
+  font-size: 16px;
+  width: 100%;
+  margin-top: 16px;
+`;
+```
+e no consumidor : 
+``` JS 
+import * as S from "./styled";
+ <S.WrapperTabs
+    selectedTabClassName="is-selected"
+    selectedTabPanelClassName="is-selected"
+ >
 ```
 
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## About project
-
-This repository was created in order to show how we can create a frontend application with reusable components.
-
-We will create an application using the github public api.
-
+- Pergunta constante : Quais componentes podem ser quebrados ? 
+- 100 linhas já é grande para um componente 
+  
 ### Features
 
 - Search infos by username
@@ -82,6 +94,15 @@ Print of the finished project.
 - [react-tabs](https://www.npmjs.com/package/react-tabs)
 - [styled-components](https://styled-components.com/)
 
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## About project
+
+This repository was created in order to show how we can create a frontend application with reusable components.
+
+We will create an application using the github public api.
 ## Available Scripts
 
 In the project directory, you can run:
