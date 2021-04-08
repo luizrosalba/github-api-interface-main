@@ -12,11 +12,45 @@
 
 ![Capturar](https://user-images.githubusercontent.com/676230/114019179-769b0100-9844-11eb-97fb-68f66dea55ea.PNG)
 
+- Vamos usar a API do GITHUB 
+- Cada componente em um contexto 
 
 ## Parte 2 Transformando a interface em Lego
+-  Mantenha Responsividade única 
 ## Parte 3 Transformando nosso lego em interface 
+- Set-ExecutionPolicy RemoteSigned
+- yarn start
+- Repositories renderiza os repositorios 
+- Stared renderiza os repositorios com estrela 
+- styled-components
+- Provider : GithubProvider a ContextAPI foi usada para distribuir os dados do usuário
+- ResetCss usa o reset style do styled-components
+
+```
+import { createGlobalStyle } from "styled-components";
+
+export const ResetCSS = createGlobalStyle`
+
+```
+Sobre Context API 
 
 
+```
+<p> Lembrando : Contexto (context) é usado principalmente quando algum dado precisa ser acessado por muitos 
+componentes em diferentes níveis.Use contexto moderadamente uma vez que isto pode dificultar a reutilização de
+componentes. Contexto (context) disponibiliza uma forma de passar dados entre a árvore de componentes 
+sem precisar passar props manualmente em cada nível. 
+<a href="https://pt-br.reactjs.org/docs/context.html">Mais sobre</a>
+</p>
+```
+
+Sobre API 
+
+```
+<p> Lembrando : Uma API simples é um endereço que ao ser consultado fornece conteúdo na maioria das vezes por JSON
+que pode ser consumido por uma aplicação 
+</p>
+```
 
 
 
