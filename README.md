@@ -1,5 +1,5 @@
 # Criando um Front-End totalmente componentizado na prática com ReactJs da Digital Innovation One 
-## Luiz Fernando Rosalba - [http://luizrosalba](https://luizrosalba.netlify.app/)
+## Luiz Fernando Rosalba - [luizrosalba](https://luizrosalba.netlify.app/)
 ## Projeto entregue como Lab - 
 ## Professor : Matheus Benites 
 
