@@ -80,7 +80,8 @@ import * as S from "./styled";
 
 - usando forms 
   
-  
+![Capturar](https://user-images.githubusercontent.com/676230/114026562-c1b91200-984c-11eb-8e5a-d579bb20cb91.PNG)
+
 
 ### Features
 
