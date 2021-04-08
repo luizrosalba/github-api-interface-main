@@ -10,6 +10,7 @@
 - Ex: Mostra os dados do usuário e além disso uma lista de repositorios. Isso faz que o componente não seja reutilizável 
 - Responsabilidade, Manutenção, Extensibilidade e clean code
 
+![Capturar](https://user-images.githubusercontent.com/676230/114019179-769b0100-9844-11eb-97fb-68f66dea55ea.PNG)
 
 
 ## Parte 2 Transformando a interface em Lego
