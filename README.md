@@ -1,16 +1,21 @@
-# Luiz Fernando Rosalba - [http://luizrosalba](https://luizrosalba.netlify.app/)
-# Projeto entregue como Lab - Criando um Front-End totalmente componentizado na prática com ReactJs da Digital Innovation One 
-# Professor : Matheus Benites 
+# Criando um Front-End totalmente componentizado na prática com ReactJs da Digital Innovation One 
+## Luiz Fernando Rosalba - [http://luizrosalba](https://luizrosalba.netlify.app/)
+## Projeto entregue como Lab - 
+## Professor : Matheus Benites 
 
-# Parte 1 Entendendo Responsividade
+## Parte 1 Entendendo Responsividade
 - Consenso : Mantenha Responsividade única 
 - Ex: Campo de login deve ser um componente tratado que apenas recebe o login 
 - Não fazer componentes com várias funcões 
 - Ex: Mostra os dados do usuário e além disso uma lista de repositorios. Isso faz que o componente não seja reutilizável 
 - Responsabilidade, Manutenção, Extensibilidade e clean code
-- 
-# Parte 2 Transformando a interface em Lego
-# Parte 3 Transformando nosso lego em interface 
+
+
+
+## Parte 2 Transformando a interface em Lego
+## Parte 3 Transformando nosso lego em interface 
+
+
 
 
 
