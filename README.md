@@ -112,7 +112,8 @@ register ({required:true})
 
 Print of the finished project.
 
-![plot](./image/snapshot-1.png)
+![Capturar](https://user-images.githubusercontent.com/676230/114062954-7adc1400-986e-11eb-92fb-8e1d48e70e73.PNG)
+
 
 ### Libraries used
 
