@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "./components/layout";
 import NoSearch from "./components/no-search";
+import NotFound from "./components/not-found";
 import Profile from "./components/profile";
 import Repositories from "./components/repositories";
 import useGithub from "./hooks/github-hooks";
@@ -21,7 +22,10 @@ const App = () => {
           )}
         </>
       ) : (
-        <NoSearch />
+        githubState.notFound?
+          <NotFound />
+        :
+          <NoSearch />
       )}
     </Layout>
   );

@@ -38,19 +38,25 @@ const Profile = () => {
         </div>
         <S.WrapperStatusCount>
           <div>
-            <h4>Followers</h4>
+            <h4>Seguidores</h4>
             <span> {githubState.user.followers}</span>
           </div>
           <div>
-            <h4>Followings</h4>
-            <span> {githubState.user.following}</span>
+            <h4>{githubState.user.name} segue: </h4>
+            {
+              githubState.user.following<=1?
+                <span> {githubState.user.following} perfil</span> 
+              :
+              <span> {githubState.user.following} perfis</span> 
+            }
+          
           </div>
           <div>
             <h4>Gists</h4>
             <span> {githubState.user.public_gists}</span>
           </div>
           <div>
-            <h4>Repos</h4>
+            <h4>Repositórios Públicos</h4>
             <span> {githubState.user.public_repos}</span>
           </div>
         </S.WrapperStatusCount>

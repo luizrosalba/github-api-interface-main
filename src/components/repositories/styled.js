@@ -7,6 +7,16 @@ export const WrapperTabs = styled(Tabs)`
   margin-top: 16px;
 `;
 
+export const ButtonLoadMore = styled.button`
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  display: block;
+`;
+
 export const WrapperTabList = styled(TabList)`
   list-style-type: none;
   padding: 4px;
@@ -51,4 +61,10 @@ export const WrapperList = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+`;
+
+
+export const WrapperButton = styled.div`
+  display: flex;
+  justify-content: center;
 `;

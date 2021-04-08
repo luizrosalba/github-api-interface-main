@@ -4,8 +4,9 @@ import RepositoryItem from "../repository-item";
 import * as S from "./styled";
 
 const Repositories = () => {
-  const { githubState, getUserRepos, getUserStarred } = useGithub();
+  const { githubState, getUserRepos, getUserStarred, getUserReposWithPage } = useGithub();
   const [hasUserForSearchrepos, setHasUserForSearchrepos] = useState(false);
+  const [page, setPage] = useState(30);
 
   useEffect(() => {
     if (githubState.user.login) {
@@ -16,6 +17,13 @@ const Repositories = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [githubState.user.login]);
+  
+  const loadMoreItens = () =>{
+    if (githubState.user.login) {
+      getUserReposWithPage(githubState.user.login, page+30);
+      setPage(page + 30)
+    }
+  }
 
   return (
     <>
@@ -39,6 +47,13 @@ const Repositories = () => {
                 />
               ))}
             </S.WrapperList>
+            <S.WrapperButton>
+                <S.ButtonLoadMore 
+                  onClick={loadMoreItens}
+                >
+                  Carregue Mais 30 Itens
+                </S.ButtonLoadMore> 
+            </S.WrapperButton>
           </S.WrapperTabPanel>
           <S.WrapperTabPanel>
             <S.WrapperList>

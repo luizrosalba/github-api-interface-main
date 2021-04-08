@@ -3,6 +3,18 @@
 ## Projeto entregue como Lab - 
 ## Professor : Matheus Benites 
 
+## O que é este projeto : 
+- Uma aplicação que consome a API do Github através de seu username. 
+- Utiliza programação funcional React com alguns exempos de Hooks
+- Utiliza styled components
+- Mostra como usar a context API, uma excelente ferramenta para compartilhar estados em aplicações pequenas
+
+## Minhas contribuições : 
+- Adicionei um aviso para quando o usuário pesquisado não existe
+- Traduzi alguns termos 
+- Adicionei um break nos itens de repositorio para que não excedam o tamanho da caixa 
+- Criei o botão carregar mais repositórios (getUserReposWithPage)
+
 ## Parte 1 Entendendo Responsividade
 - Consenso : Mantenha Responsividade única 
 - Ex: Campo de login deve ser um componente tratado que apenas recebe o login 
@@ -82,6 +94,13 @@ import * as S from "./styled";
   
 ![Capturar](https://user-images.githubusercontent.com/676230/114026562-c1b91200-984c-11eb-8e5a-d579bb20cb91.PNG)
 
+register ({required:true}) 
+- tratamento de erro 
+{erros.email && <span> Este campo é obrigatório {erros.email} </span>}
+
+- usando modal 
+<ModalForm refInputs={register} />
+-dentro do modal buscar o refInputs e passamos pro componente 
 
 ### Features
 

@@ -11,6 +11,8 @@ export const GithubContext = createContext({
 const GithubProvider = ({ children }) => {
   const [githubState, setGithubState] = useState({
     hasUser: false,
+    notFound: false,
+    hasMoreRepos: false,
     loading: false,
     user: {
       id: undefined,
@@ -63,12 +65,17 @@ const GithubProvider = ({ children }) => {
           ...prevState,
           loading: !prevState.loading,
         }));
+      })
+      .catch((error)=>{
+        setGithubState((prevState) => ({
+          notFound: true,
+        }));
       });
   };
 
   const getUserRepos = (username) => {
     api.get(`users/${username}/repos`).then(({ data }) => {
-      console.log("data: " + JSON.stringify(data));
+      //console.log("data: " + JSON.stringify(data));
       setGithubState((prevState) => ({
         ...prevState,
         repositories: data,
@@ -76,9 +83,19 @@ const GithubProvider = ({ children }) => {
     });
   };
 
+  const getUserReposWithPage = (username, page) => {
+    api.get(`users/${username}/repos?per_page=${page}`).then(({ data }) => {
+      //console.log("data: " + JSON.stringify(data));
+      setGithubState((prevState) => ({
+        ...prevState,
+        repositories: [...data],
+      }));
+    });
+  };
+
   const getUserStarred = (username) => {
     api.get(`users/${username}/starred`).then(({ data }) => {
-      console.log("data: " + JSON.stringify(data));
+      //console.log("data: " + JSON.stringify(data));
       setGithubState((prevState) => ({
         ...prevState,
         starred: data,
@@ -90,6 +107,7 @@ const GithubProvider = ({ children }) => {
     githubState,
     getUser: useCallback((username) => getUser(username), []),
     getUserRepos: useCallback((username) => getUserRepos(username), []),
+    getUserReposWithPage: useCallback((username, page) => getUserReposWithPage(username, page), []),
     getUserStarred: useCallback((username) => getUserStarred(username), []),
   };
 
