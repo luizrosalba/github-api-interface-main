@@ -76,6 +76,12 @@ import * as S from "./styled";
 - Pergunta constante : Quais componentes podem ser quebrados ? 
 - 100 linhas já é grande para um componente 
   
+## Extra: 
+
+- usando forms 
+  
+  
+
 ### Features
 
 - Search infos by username
